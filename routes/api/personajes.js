@@ -6,12 +6,12 @@ const {Personaje} = require('../../db')
 router.get('/',async (req,res)=>{
     // res.send("primer endpoint")
     const personajes = await Personaje.findAll()
-    res.json(personajes)
+    return  res.json({personajes})
 })
 
 router.post('/',async(req,res)=>{
     const personajes = await Personaje.create(req.body);
-    res.json(personajes);
+    return res.json({personajes});
 })
 
 router.put('/:id',async(req,res)=>{

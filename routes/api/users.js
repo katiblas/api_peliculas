@@ -71,27 +71,4 @@ const crearToken= (user)=>{
     return jwt.encode(body,"frase")
 }
 
-// router.put('/:id',async(req,res)=>{
-//     const userid = await Users.findOne({where: {id:req.params.id}})
-//     if(!userid){
-//         return res.json({message:"El personaje no existe"})
-//     }
-//     await Users.update(req.body, {
-//         where: {id: req.params.id}
-//     })
-//     return res.json({message:"Modificado correctamente"})
-    
-// })
-
-// router.delete('/:id',async(req,res)=>{
-//     const userid = await Users.findOne({where: {id:req.params.id}})
-//     if(!userid){
-//         return res.json({message:"El usuario no existe"})
-//     }
-//     await Users.update({is_active:false }, {
-//         where: {id: req.params.id}
-//     })
-//     return res.json({message:"Eliminado correctamente"})
-    
-// })
 module.exports = router;
